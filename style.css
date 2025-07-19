@@ -4,7 +4,10 @@
   box-sizing: border-box;
   user-select: none;
 }
+
 body {
+  background-color: rgb(20, 20, 20);
+  color: white;
   font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
@@ -14,31 +17,26 @@ body {
   overflow: hidden;
   padding: 20px;
   text-align: center;
-  transition: background-color 0.4s ease, color 0.4s ease;
 }
-body.dark-mode {
-  background-color: rgb(20, 20, 20);
-  color: white;
-}
-body.light-mode {
-  background-color: white;
-  color: black;
-}
+
 h1 {
   font-size: 4em;
   margin-bottom: 20px;
 }
+
 .tagline {
   font-size: 1.1em;
   color: #aaa;
   margin-bottom: 30px;
 }
+
 .buttons {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .btn {
   width: 80px;
   height: 80px;
@@ -51,24 +49,17 @@ h1 {
   transition: background 0.3s;
   position: relative;
 }
-body.light-mode .btn {
-  background-color: #ddd;
-}
+
 .btn:hover {
   background-color: #444;
 }
-body.light-mode .btn:hover {
-  background-color: #bbb;
-}
+
 .btn img {
   width: 38px;
   height: 38px;
   filter: brightness(0) invert(1);
-  transition: filter 0.3s;
 }
-body.light-mode .btn img {
-  filter: brightness(0);
-}
+
 .tooltip {
   position: absolute;
   bottom: -30px;
@@ -82,13 +73,11 @@ body.light-mode .btn img {
   pointer-events: none;
   white-space: nowrap;
 }
-body.light-mode .tooltip {
-  background-color: #333;
-  color: white;
-}
+
 .btn:hover .tooltip {
   opacity: 1;
 }
+
 @media (max-width: 480px) {
   h1 {
     font-size: 3em;
@@ -106,41 +95,3 @@ body.light-mode .tooltip {
     height: 35px;
   }
 }
-
-/* Switch styles */
-.ui-switch {
-  --switch-bg: rgb(135, 150, 165);
-  --switch-width: 48px;
-  --switch-height: 20px;
-  --circle-diameter: 32px;
-  --circle-bg: rgb(0, 56, 146);
-  --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
-  margin-top: 40px;
-}
-.ui-switch input {
-  display: none;
-}
-.slider {
-  width: var(--switch-width);
-  height: var(--switch-height);
-  background: var(--switch-bg);
-  border-radius: 999px;
-  position: relative;
-  cursor: pointer;
-}
-.slider .circle {
-  position: absolute;
-  top: calc(var(--circle-inset) * -1);
-  left: 0;
-  width: var(--circle-diameter);
-  height: var(--circle-diameter);
-  background: var(--circle-bg);
-  border-radius: inherit;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTkuMzA1IDEuNjY3VjMuNzVoMS4zODlWMS42NjdoLTEuMzl6bS00LjcwNyAxLjk1bC0uOTgyLjk4Mkw1LjA5IDYuMDcybC45ODItLjk4Mi0xLjQ3My0xLjQ3M3ptMTAuODAyIDBMMTMuOTI3IDUuMDlsLjk4Mi45ODIgMS40NzMtMS40NzMtLjk4Mi0uOTgyek0xMCA1LjEzOWE0Ljg3MiA0Ljg3MiAwIDAwLTQuODYyIDQuODZBNC44NzIgNC44NzIgMCAwMDEwIDE0Ljg2MiA0Ljg3MiA0Ljg3MiAwIDAwMTQuODYgMTAgNC44NzIgNC44NzIgMCAwMDEwIDUuMTM5em0wIDEuMzg5QTMuNDYyIDMuNDYyIDAgMDExMy40NzEgMTBhMy40NjIgMy40NjIgMCAwMS0zLjQ3MyAzLjQ3MkEzLjQ2MiAzLjQ2MiAwIDAxNi41MjcgMTAgMy40NjIgMy40NjIgMCAwMTEwIDYuNTI4ek0xLjY2NSA5LjMwNXYxLjM5aDIuMDgzdi0xLjM5SDEuNjY2em0xNC41ODMgMHYxLjM5aDIuMDg0di0xLjM5aC0yLjA4NHpNNS4wOSAxMy45MjhMMy42MTYgMTUuNGwuOTgyLjk4MiAxLjQ3My0xLjQ3My0uOTgyLS45ODJ6bTkuODIgMGwtLjk4Mi45ODIgMS40NzMgMS40NzMuOTgyLS45ODItMS40NzMtMS40NzN6TTkuMzA1IDE2LjI1djIuMDgzaDEuMzg5VjE2LjI1aC0xLjM5eiIgLz4KPC9zdmc+");
-  transition: left 150ms ease, transform 150ms ease;
-}
-.ui-switch input:checked + .slider .circle {
-  left: calc(100% - var(--circle-diameter));
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTQuMiAyLjVsLS43IDEuOC0xLjguNyAxLjguNy43IDEuOC42LTEuOEw2LjcgNWwtMS45LS43LS42LTEuOHptMTUgOC4zYTYuNyA2LjcgMCAxMS02LjYtNi42IDUuOCA1LjggMCAwMDYuNiA2LjZ6IiAvPgo8L3N
