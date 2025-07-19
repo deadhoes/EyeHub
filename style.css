@@ -20,12 +20,12 @@ body {
 }
 
 h1 {
-  font-size: 5em; /* büyütüldü */
+  font-size: 4.2em; /* biraz küçültüldü */
   margin-bottom: 20px;
 }
 
 .tagline {
-  font-size: 1.3em; /* büyütüldü */
+  font-size: 1.05em; /* biraz küçültüldü */
   color: #aaa;
   margin-bottom: 30px;
 }
@@ -38,8 +38,8 @@ h1 {
 }
 
 .btn {
-  width: 60px;  /* küçültüldü */
-  height: 60px; /* küçültüldü */
+  width: 55px;  /* biraz küçültüldü */
+  height: 55px; /* biraz küçültüldü */
   background-color: #2c2c2c;
   border-radius: 50%;
   display: flex;
@@ -55,8 +55,8 @@ h1 {
 }
 
 .btn img {
-  width: 28px;  /* küçültüldü */
-  height: 28px; /* küçültüldü */
+  width: 26px;  /* biraz küçültüldü */
+  height: 26px; /* biraz küçültüldü */
   filter: brightness(0) invert(1);
 }
 
@@ -80,18 +80,18 @@ h1 {
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 4em; /* büyütüldü */
+    font-size: 3.2em; /* biraz küçültüldü */
   }
   .tagline {
-    font-size: 1.2em; /* büyütüldü */
+    font-size: 1em; /* biraz küçültüldü */
     margin-bottom: 20px;
   }
   .btn {
-    width: 50px;  /* küçültüldü */
-    height: 50px; /* küçültüldü */
+    width: 45px;  /* biraz küçültüldü */
+    height: 45px; /* biraz küçültüldü */
   }
   .btn img {
-    width: 25px;  /* küçültüldü */
-    height: 25px; /* küçültüldü */
+    width: 22px;  /* biraz küçültüldü */
+    height: 22px; /* biraz küçültüldü */
   }
 }
