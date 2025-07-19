@@ -14,6 +14,8 @@ body {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
+  padding: 20px;
+  text-align: center;
 }
 h1 {
   font-size: 3em;
@@ -27,6 +29,8 @@ h1 {
 .buttons {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .btn {
   width: 60px;
@@ -63,4 +67,23 @@ h1 {
 }
 .btn:hover .tooltip {
   opacity: 1;
+}
+
+/* Mobil için responsive ayarlar */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2em;
+  }
+  .tagline {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  .btn {
+    width: 50px;
+    height: 50px;
+  }
+  .btn img {
+    width: 22px;
+    height: 22px;
+  }
 }
