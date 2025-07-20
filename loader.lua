@@ -4,7 +4,7 @@ print("Thanks for using EyeHub.")
 print("Dont forget to join our discord!".. Discord)
 
 local GameScripts = {
-    [110829983956014] = "https://raw.githubusercontent.com/deadhoes/EyeHub/main/scripts/animecardclash.lua",
+    [126884695634066] = "https://raw.githubusercontent.com/deadhoes/EyeHub/main/scripts/growagarden.lua",
 }
 
 local currentGame = game.PlaceId
